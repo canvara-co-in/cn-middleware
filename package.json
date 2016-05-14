@@ -1,0 +1,48 @@
+{
+  "name": "cn-middleware",
+  "version": "0.0.0-semantically-released",
+  "description": "Common middlewares for express application",
+  "main": "src/index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "test": "mocha ./test",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "coverage": "istanbul cover _mocha -- -R spec ./test ",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canvara-co-in/cn-middleware.git"
+  },
+  "keywords": [
+    "JWT",
+    "auth-helper",
+    "canvara"
+  ],
+  "author": "Hari Narasimhan <hari@canvara.co.in> (http://canvara.co.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canvara-co-in/cn-middleware/issues"
+  },
+  "homepage": "https://github.com/canvara-co-in/cn-middleware#readme",
+  "dependencies": {
+    "cn-auth-helper": "0.6.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.8.0",
+    "cz-conventional-changelog": "1.1.6",
+    "ghooks": "1.2.1",
+    "istanbul": "0.4.3",
+    "mocha": "2.4.5",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
+  }
+}
