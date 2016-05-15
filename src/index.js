@@ -21,7 +21,7 @@ var getAuthMiddleware = function (secret) {
       return res.status(401).send(result.error);
     }
 
-    req.decodedToken = result.payload;
+    req.authToken = result.payload;
     next();
   };
 };

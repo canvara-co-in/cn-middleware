@@ -6,7 +6,6 @@
   "scripts": {
     "commit": "git-cz",
     "test": "mocha ./test",
-    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "coverage": "istanbul cover _mocha -- -R spec ./test ",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
