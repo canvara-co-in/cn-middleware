@@ -9,7 +9,7 @@ var SECRET = 'SECRET';
 var token = 'Bearer ' + authHelper.encodeToken(
   { user: 'user', roles: ['admin', 'staff'] }, SECRET);
 
-// Poor mans mock of express request and response
+// Poor man's mock of express request and response
 var req = { headers: { authorization: token } };
 var invalidReq = { headers: { authorization: '' } };
 var createResponse = function (expectedError) {

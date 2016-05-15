@@ -28,4 +28,5 @@ var getAuthMiddleware = function (secret) {
 
 module.exports  = {
   getAuthMiddleware: getAuthMiddleware,
+  Errors: Errors,
 };
